@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- 设定缓存的默认数据过期策略 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+            
+	<!--缓存文件名：cache_user，同样的可以配置多个缓存-->
+    <cache name="userInfo"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="5"/>
+
+</ehcache>

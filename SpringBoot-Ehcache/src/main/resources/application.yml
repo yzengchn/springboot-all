@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: SpringBoot-Ehcache
+      
+  datasource:
+    url:  jdbc:mysql://139.199.86.201:3306/charself?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    show-sql: true  
+     
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:/ehcache.xml
+      
+      
+  
